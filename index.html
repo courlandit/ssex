@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SSEX Demo</title>
+  <script src="ssex.js"></script>
+</head>
+<body>
+    <div ssex-subscribe="cart.update" ssex-swap="append">Cart is empty</div>
+
+    <button ssex-click="http://localhost:3080/api/cart/add/42">Add Item 42</button>
+
+    <button ssex-click="http://localhost:3080/test-news">Send News</button>
+
+    <div ssex-subscribe="news.update" ssex-swap="append"></div>
+
+  <script>
+    const ssex = new SSEX({ url: "http://localhost:3080/sse", debug: true });
+    ssex.start();
+  </script>
+</body>
+</html>
