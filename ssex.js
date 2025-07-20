@@ -12,10 +12,15 @@
             PREPEND: "prepend",
         });
 
+        const Positions = Object.freeze({
+            START: "afterbegin",
+            END: "beforeend",
+        })
+
         const htmlManipulator = new Map([
             [Modes.REPLACE, (element, html) => element.innerHTML = html],
-            [Modes.APPEND, (element, html) => element.insertAdjacentHTML("beforeend", html)],
-            [Modes.PREPEND, (element, html) => element.insertAdjacentHTML("afterbegin", html)],
+            [Modes.APPEND, (element, html) => element.insertAdjacentHTML(Positions.END, html)],
+            [Modes.PREPEND, (element, html) => element.insertAdjacentHTML(Positions.START, html)],
         ]);
 
         class SSEX {
