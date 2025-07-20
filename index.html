@@ -6,13 +6,13 @@
   <script src="ssex.js"></script>
 </head>
 <body>
-    <div ssex-subscribe="cart.update" ssex-swap="append">Cart is empty</div>
+    <div sx-subscribe="cart.update" sx-swap="append">Cart is empty</div>
 
-    <button ssex-click="http://localhost:3080/api/cart/add/42">Add Item 42</button>
+    <button sx-click="http://localhost:3080/api/cart/add/42">Add Item 42</button>
 
-    <button ssex-click="http://localhost:3080/test-news">Send News</button>
+    <button sx-click="http://localhost:3080/test-news">Send News</button>
 
-    <div ssex-subscribe="news.update" ssex-swap="append"></div>
+    <div sx-subscribe="news.update" sx-swap="append"></div>
 
   <script>
     const ssex = new SSEX({ url: "http://localhost:3080/sse", debug: true });

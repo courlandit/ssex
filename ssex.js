@@ -1,9 +1,9 @@
 (
     function () {
         const Attributes = Object.freeze({
-            CLICK: "ssex-click",
-            SUBSCRIBE: "ssex-subscribe",
-            SWAP: "ssex-swap",
+            CLICK: "sx-click",
+            SUBSCRIBE: "sx-subscribe",
+            SWAP: "sx-swap",
         });
 
         const Modes = Object.freeze({
@@ -111,7 +111,7 @@
             }
 
             log(...args) {
-                if (this.debug) console.log("[SSEX]", ...args);
+                if (this.debug) console.log("[SX]", ...args);
             }
 
         }
